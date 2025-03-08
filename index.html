@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stylish Resume Builder</h1>
+        
+        <div class="form-container">
+            <label>Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label>Phone:</label>
+            <input type="text" id="phone" placeholder="Enter your phone number">
+
+            <label>Address:</label>
+            <textarea id="address" placeholder="Enter your address"></textarea>
+
+            <label>Education:</label>
+            <textarea id="education" placeholder="Enter your education details"></textarea>
+
+            <label>Skills:</label>
+            <textarea id="skills" placeholder="Enter your skills"></textarea>
+
+            <label>Experience:</label>
+            <textarea id="experience" placeholder="Enter your experience"></textarea>
+
+            <label>Upload Profile Image:</label>
+            <input type="file" id="imageUpload" accept="image/*">
+
+            <label>Font Color:</label>
+            <input type="color" id="fontColor" value="#000000">
+
+            <label>Font Style:</label>
+            <select id="fontStyle">
+                <option value="Arial">Arial</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+            </select>
+
+            <label>Text Formatting:</label>
+            <input type="checkbox" id="bold"> <label>Bold</label>
+            <input type="checkbox" id="italic"> <label>Italic</label>
+
+            <button onclick="generateResume()">Generate Resume</button>
+        </div>
+
+        <div id="resume-preview">
+            <div class="header">
+                <h2 id="resume-name"></h2>
+                <img id="resume-image" src="" alt="Profile Image">
+            </div>
+            <p id="resume-email"></p>
+            <p id="resume-phone"></p>
+            <p id="resume-address"></p>
+            <h3>Education</h3>
+            <p id="resume-education"></p>
+            <h3>Skills</h3>
+            <p id="resume-skills"></p>
+            <h3>Experience</h3>
+            <p id="resume-experience"></p>
+            <button onclick="downloadPDF()">Download as PDF</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
